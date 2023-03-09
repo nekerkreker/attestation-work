@@ -1,36 +1,16 @@
-h1 {
-    background-color: none;
-    width: 30vw;
-    color: orangered;
-}
-
-@keyframes news {
-    from {
-        margin-left: 1px;
-    }
-    to {
-        margin-left: 1000px;
-    }
-}
-
-h1 {
-    animation: news 60s linear alternate infinite;
-}
-
 body {
-    max-width: 1080px;
-    width: 1080px;
-    margin: auto;
+    width: 100%;
+    margin: 25px;
     background: url(./img/background.png);
-    height: 1134px;
+    height: 100%;
     color: #fff;
 }
 
 .header {
     display: flex;
-    justify-content: space-around;
-    margin-top: 24px;
-    margin-bottom: 200px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
 .menu-list {
@@ -45,7 +25,7 @@ body {
 
 .menu-item a {
     text-decoration: none;
-    color: blue;
+    color: goldenrod ;
 }
 
 .active {
@@ -53,7 +33,7 @@ body {
 }
 
 .main-text {
-    font-weight: 500;
+    font-weight: 500px;
     font-size: 53px;
     line-height: 62px;
     color: crimson;
@@ -79,20 +59,6 @@ body {
     line-height: 19px;
 }
 
-@media screen and (max-width: 1080px) {
-    .body {
-        width: 50%;
-        max-width: 100%;
-        margin: auto auto 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .body {
-        width: 80%;
-    }
-}
-
 .link {
     text-decoration: none;
     display: inline-block;
@@ -109,5 +75,71 @@ body {
 
 .logo {
     width: 30%;
+}
+
+.navbar {
+    font-size: 18px;
+}
+
+.add {
+    overflow: hidden;
+    border-top: 1px solid rgba(128, 128, 128, 0.1);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+    min-height: 40px;
+}
+
+#callback {
+    width: 300px;
+    height: 150px;
+    background-color: grey;
+    position: absolute;
+    bottom: 30px;
+    transform: translateX(-100%);
+} 
+
+#callback p {
+    color: #fff;
+    padding: 22px;
+}
+
+#callback:after {
+    content: 'Вопросы и предложения';
+    background-color: blueviolet;
+}
+
+#callback:after {
+    content: 'Вопросы и предложения';
+    background-color: blueviolet;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 0;
+    width: 150px;
+    position: absolute;
+    left: 300px;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+}
+
+#callback:hover {
+    transform: translateX(0%);
+    transition: all 0.7s ease;
+}
+ 
+h1 {
+    width: 50vw;
+    color: red;
+}
+
+@keyframes myAnim {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 500px;
+    }
+}
+
+h1 {
+    animation: myAnim 5s linear alternate infinite;
 }
 
